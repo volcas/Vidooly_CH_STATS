@@ -76,7 +76,7 @@ def Predict(model, batch_size, Data):
 	return Output[0,0]
  
 #Loading dataset
-DataSet= pd.read_csv("Da.CSV",usecols=[1])
+DataSet= pd.read_csv("Dataset.CSV",usecols=[1])
 
 #Loading the last two values of the dataset for LSTM to use
 FinalInput=[6959154,6964029]
