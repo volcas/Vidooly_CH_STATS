@@ -13,3 +13,15 @@ Subscriber count is predicted with RMSE=2.906
 Video count is predicted with RMSE=0.013
 
 Note: RMSE can be reduced by change in no. of epochs and neurons
+
+File Description:
+  
+ 	Combined.py -Contains code to combine the three CSV prediction files to one
+	Dataset.csv -Contains the data which was used for prediction
+  FinalOP.csv -Contains prediction of Views, Subscriber Count, Video Count from 2017-04-01 to 2017-06-30
+	SubscriberCount.csv -Contains predicted SubcriberCount 		
+  SubscriberCountPrediction.py -Contains code to predict Subscriber count
+	VideoCount.csv  -Contains predicted Video Count
+  VidCountPrediction.py 	-Contains code to predict Video Count
+  Views.csv -Contains predicted Views
+  ViewsPrediction.py -Contains code to predict Views 
