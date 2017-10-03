@@ -101,7 +101,7 @@ FinalInput= FinalInput_supervised_values
 ScalerModel, train_scaled, FinalInput_scaled = FuncScale(train, FinalInput)
  
 #Fitting the model
-LSTMModel = FIT(train_scaled, 1, 100, 4)
+LSTMModel = FIT(train_scaled, 1, 10, 4)
 #Forecast the entire training dataset to build up state for forecasting
 train_reshaped = train_scaled[:, 0].reshape(len(train_scaled), 1, 1)
 LSTMModel.predict(train_reshaped, batch_size=1)
@@ -110,7 +110,7 @@ LSTMModel.predict(train_reshaped, batch_size=1)
 Last_Value= FinalInput_scaled[0, 0:-1]
 
 #Walk-forward validation on the final input
-New_predictions = pd.DataFrame({'SubscriberCount' : []})
+New_predictions = pd.DataFrame({'SubCount' : []})
 
 #To help with the difference
 Prev_value=1964
@@ -126,7 +126,7 @@ for i in range(90):
 	OP = Invert(Prev_value,OP)
 	
    # storing forecast
-	New_predictions= New_predictions.append(pd.DataFrame({'SubscriberCount':OP},index=[i+1]))
+	New_predictions= New_predictions.append(pd.DataFrame({'SubCount':OP},index=[i+1]))
 	
 	Prev_value=OP    #Changing last value to the current value for the next iteration
     
