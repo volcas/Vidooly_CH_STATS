@@ -7,7 +7,9 @@ Code inspired by https://machinelearningmastery.com/time-series-prediction-lstm-
 
 
 Views is predicted with RMSE=3925.009
+
 Subscriber count is predicted with RMSE=2.906
+
 Video count is predicted with RMSE=0.013
 
 Note: RMSE can be reduced by change in no. of epochs and neurons
