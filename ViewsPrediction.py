@@ -101,7 +101,7 @@ FinalInput= FinalInput_supervised_values
 ScalerModel, train_scaled, FinalInput_scaled = FuncScale(train, FinalInput)
  
 #Fitting the model
-LSTMModel = FIT(train_scaled, 1, 10, 4)
+LSTMModel = FIT(train_scaled, 1, 1500, 1)
 #Forecast the entire training dataset to build up state for forecasting
 train_reshaped = train_scaled[:, 0].reshape(len(train_scaled), 1, 1)
 LSTMModel.predict(train_reshaped, batch_size=1)
